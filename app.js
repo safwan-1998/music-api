@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 db.connect().then(() =>{
-    console.log('done !!')
+    console.log(db)
 })
 
 app.get('/', (req, res) => {

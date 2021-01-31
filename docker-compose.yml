@@ -2,22 +2,20 @@ version: "3.7"
 
 services:
   web:
-    image: gaana-api
+    build: .
     depends_on:
       - db
     environment: 
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: Safwan@2
-      POSTGRES_DATABASE: peak
-      POSTGRES_HOST: host.docker.internal
+      POSTGRES_PASSWORD: Safwanman@2
+      POSTGRES_DATABASE: postgres
+      POSTGRES_HOST: db
     ports:
       - "5000:5000"
 
   db:
     image: postgres
     environment:
-      POSTGRES_PASSWORD: Safwan@2
-      POSTGRES_USER: postgres
-      POSTGRES_DB: peak
+      POSTGRES_PASSWORD: Safwanman@2
     ports:
       - "5432:5432"
