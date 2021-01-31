@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   web:
-    image: gaana
+    build: .
     depends_on:
       - db
     environment: 
@@ -21,4 +21,3 @@ services:
       - ./postgres-data/:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-      
