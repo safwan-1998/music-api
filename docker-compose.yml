@@ -15,9 +15,10 @@ services:
 
   db:
     image: postgres
+    build:
+      context: .
+      dockerfile: schema-docker/Dockerfile
     environment:
       POSTGRES_PASSWORD: Safwanman@2
-    volumes: 
-      - ./postgres-data/:/var/lib/postgresql/data
     ports:
       - "5432:5432"
